@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: siddharthtrainingpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: siddharthtrainingpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: siddharthtrainingpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: siddharthtrainingpipelinesjavascriptdocker 
+          image: mycontainer27registry.azurecr.io/siddharthtrainingpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
